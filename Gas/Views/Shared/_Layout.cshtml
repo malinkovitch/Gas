@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gaslight Type Foundry</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1" id="wrapper">
+
+                <!--Здесь живет header-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12" id="header_content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12" id='header_logo'>
+                                <a href="@Url.Action("Index", "Home")"><div id="header_logo_img"></div></a>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-xs-12 col-sm-8 col-md-8' id='main_menu'>
+                                <ul class="list-inline">
+                                    <li class='main_menu_item'>@Html.ActionLink("О нас", "Mock", "Home")</li>
+                                    <li class='main_menu_item'>@Html.ActionLink("Лого", "Mock", "Home")</li>
+                                    <li class='main_menu_item'>@Html.ActionLink("Дизайн", "Mock", "Home")</li>
+                                    <li class='main_menu_item'>@Html.ActionLink("Шрифты", "Mock", "Home")</li>
+                                    <li class='main_menu_item'>@Html.ActionLink("Контакты", "Mock", "Home")</li>
+                                </ul>
+                            </div>
+                            <div class='hidden-xs col-sm-4 col-md-4' id='main_phone'>
+                                <p class='main_phone_text'>
+                                    <span id='phone'>+7 (920) 850-01-41</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="body">
+                    @RenderSection("featured", required: false)
+                    <section class="content-wrapper main-content clear-fix">
+                        @RenderBody()
+                    </section>
+                </div>
+
+
+
+                <!--Здесь живет footer-->
+                <div class='row'>
+                    <div class='col-xs-12 col-sm-12 col-md-12' id='footer'>
+                        <div class='row'>
+                            <div class='col-xs-12 col-sm-3 col-md-3' id='contacts_l'>
+                                <ul class="footer-list">
+                                    <li class="footer_contact">
+                                        <div id="pic_1"></div>
+                                        <div class="footer_contact_text">7-952-963-32-46</div><div class="clear"></div>
+                                    </li>
+                                    <li class="footer_contact">
+                                        <div id="pic_2"></div><div class="footer_contact_text">чет-почта@mail.ru</div><div class="clear"></div>
+                                    </li>
+                                    <li class="footer_contact">
+                                        <div id="pic_3"></div><div class="footer_contact_text">Skype-nick</div><div class="clear"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class='hidden-xs col-sm-3 col-md-3' id='contacts_r'>
+                                <ul class="footer-list">
+                                    <li class="footer_contact">
+                                        <div id="pic_4"></div>
+                                        <div class="footer_contact_text">facebook</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li class="footer_contact">
+                                        <div id="pic_5"></div>
+                                        <div class="footer_contact_text">twitter</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li class="footer_contact">
+                                        <div id="pic_6"></div>
+                                        <div class="footer_contact_text">Instagram</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="credits"><p>&copy; @DateTime.Now.Year - I &#10084; my fonts</p></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

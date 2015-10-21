@@ -1,0 +1,155 @@
+@font-face{
+	font-family: 'PTM55F';
+	src: url(../fonts/PTM55F_W.ttf);
+}
+body{
+	
+}
+.container-fluid{
+	background-color: #fff;
+}
+#wrapper{
+    background-color: #00bfff;
+}
+.clear {
+    clear: both;
+}
+.error {
+    color: #e80c4d;
+}
+hgroup.title {
+    margin-bottom: 10px;
+}
+
+hgroup.title h1, hgroup.title h2 {
+    display: inline;
+}
+
+hgroup.title h2 {
+    font-weight: normal;
+    margin-left: 3px;
+}
+
+
+/* header description
+-----------------------------------*/
+#header_content{
+	background-color: black;
+}
+#header_logo{
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-bottom: 10px;
+}
+#header_logo_img {
+    height: 40px;
+	width: 137.85px;
+	background: url(../images/Gaslight-site_logo.png) left top no-repeat;
+    -ms-background-size: 137.85px 40px;
+    background-size: 137.85px 40px;
+}
+#main_menu{
+	padding-top: 10px;
+	padding-left: 40px;
+	font-family: "PTM55F";
+	font-size: 12px;
+	color: white;
+}
+.main_menu_item{
+	padding-left: 5px!important;
+	padding-right: 5px!important;
+	margin-right: 7px;
+	border: 2px solid #fff;
+}
+.main_menu_item{
+	padding-left: 5px!important;
+	padding-right: 5px!important;
+	margin-right: 7px;
+	border: 2px solid #fff;
+}
+#main_phone{
+	font-family: "PTM55F";
+	padding: 0!important;
+	margin: 0!important;
+	height: 40px;
+}
+.main_phone_text{
+	text-align: right;
+	padding: 0!important;
+	margin: 0!important;
+}
+#phone{
+	font-size: 20px;
+	color: white;
+	padding-right: 40px;
+}
+
+
+/* footer description
+-----------------------------------*/
+#footer{
+	background-color: #ffffff;
+}
+#contacts_l{
+}
+#contacts_r{
+}
+.credits {
+    text-align: center; 
+    font-family: "PTM55F";
+    font-size: 12px;
+
+}
+.footer-list {
+    list-style-type: none;   
+}
+.footer_contact {
+    font-family: "PTM55F";
+    padding-top: 10px;
+}
+.footer_contact_text {
+    float: left;
+    padding-left: 15px;
+}
+#pic_1 {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../images/phone.png) left top no-repeat;
+    background-size: cover;
+}
+#pic_2 {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../images/email.png) left top no-repeat;
+    background-size: cover;
+}
+#pic_3 {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../images/skype.png) left top no-repeat;
+    background-size: cover;
+}
+#pic_4 {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../images/facebook.png) left top no-repeat;
+    background-size: cover;
+}
+#pic_5 {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../images/twitter.png) left top no-repeat;
+    background-size: cover;
+}
+#pic_6 {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../images/instagram.png) left top no-repeat;
+    background-size: cover;
+}
