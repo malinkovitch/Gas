@@ -33,5 +33,10 @@ namespace Gas.Controllers
         {
             return View();
         }
+
+        public ActionResult Fonts()
+        {
+            return View();
+        }
     }
 }

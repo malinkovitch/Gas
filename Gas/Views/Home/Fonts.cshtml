@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Fonts";
+}
+
+<!DOCTYPE html>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12" id="main_content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12" id="font_item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12" id="font_item_header">
+                        <div class="row">
+                            <div class="col-xs-10 col-sm-6 col-md-6" id="font_item_img">
+                                Название шрифта
+                            </div>
+                            <div class="hidden-xs col-sm-2 col-sm-offset-2 col-md-2 col-md-offset-2" id="font_item_price">
+                                <div id="price">30$</div>
+                            </div>
+                            <div class="col-xs-2  col-sm-2 col-md-2" id="font_item_showbutton">
+                                <div id="font_item_showbutton_img"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12" id="font_item_content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12" id="font_cyr">
+                                <div id="font_cyr_img"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-6" id="font_menu">
+                                <ul class="list-inline">
+                                    <li class="font_menu_item">@Html.ActionLink("Кириллица", "Mock", "Home")</li>
+                                    <li class="font_menu_item">Латиница</li>
+                                    <li class="font_menu_item">Цифры</li>
+                                    <li class="font_menu_item">Лигатуры</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

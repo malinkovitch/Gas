@@ -2,6 +2,10 @@
 	font-family: 'PTM55F';
 	src: url(../fonts/PTM55F_W.ttf);
 }
+@font-face{
+	font-family: 'aorta';
+	src: url(../fonts/aorta.otf);
+}
 body{
 	
 }
@@ -84,7 +88,6 @@ hgroup.title h2 {
 	padding-right: 40px;
 }
 
-
 /* footer description
 -----------------------------------*/
 #footer{
@@ -152,4 +155,75 @@ hgroup.title h2 {
     height: 20px;
     background: url(../images/instagram.png) left top no-repeat;
     background-size: cover;
+}
+
+/* font body decription
+------------------------------------------*/
+
+#main_content {
+    height: 600px;
+    background-color: #adf555;
+}
+#font_item {
+    margin-top: 15px;
+}
+#font_item_header {
+    border: 1px solid #000;
+}
+#font_item_img {
+    height: 100px;
+    background-color: gold;
+}
+#font_item_price {
+    height: 100px;
+}
+#price {
+    margin-top: 22px;
+	font-family: 'PTM55F';
+	font-size: 40px;
+}
+#font_item_showbutton {
+    height: 100px;
+}
+#font_item_showbutton_img {
+    background: url(../images/cross.png) left top no-repeat;
+	background-size: 50px 50px;
+	height: 50px;
+	width: 50px;
+	margin-left: 25px;
+	margin-top: 23px;
+}
+#font_item_content {
+    border-bottom: 1px solid grey;
+	border-left: 1px solid grey;
+	border-right: 1px solid grey;
+}
+#font_cyr {
+    margin-top: 10px; 
+	background-overflow: hidden!important;
+}
+#font_cyr_img {
+    height: 170px;
+	width: 710px;
+	background: url(../images/action_cyr.png) left top no-repeat;
+	background-size: 706.3px 170px;
+	
+	margin-top: 40px;
+	margin-bottom: 60px;
+	margin-left: 30px;
+}
+#font_menu{
+	height: 40px;
+	padding-top: 10px;
+	padding-left: 150px;
+    background-color: pink;
+}
+.font_menu_item{
+	padding-left: 5px!important;
+	padding-right: 5px!important;
+	margin-right: 7px;
+	border: 2px solid #000;
+	font-family: "PTM55F";
+	font-size: 12px;
+	color: #000;
 }
