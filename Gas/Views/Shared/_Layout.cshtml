@@ -27,7 +27,7 @@
                                     <li class='main_menu_item'>@Html.ActionLink("О нас", "Mock", "Home")</li>
                                     <li class='main_menu_item'>@Html.ActionLink("Лого", "Mock", "Home")</li>
                                     <li class='main_menu_item'>@Html.ActionLink("Дизайн", "Mock", "Home")</li>
-                                    <li class='main_menu_item'>@Html.ActionLink("Шрифты", "Mock", "Home")</li>
+                                    <li class='main_menu_item'>@Html.ActionLink("Шрифты", "Fonts", "Home")</li>
                                     <li class='main_menu_item'>@Html.ActionLink("Контакты", "Mock", "Home")</li>
                                 </ul>
                             </div>
@@ -40,12 +40,15 @@
                     </div>
                 </div>
 
-                <div id="body">
+
+                @RenderBody()
+
+                @*<div id="body">
                     @RenderSection("featured", required: false)
                     <section class="content-wrapper main-content clear-fix">
-                        @RenderBody()
+                        
                     </section>
-                </div>
+                </div>*@
 
 
 
