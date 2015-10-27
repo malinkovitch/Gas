@@ -15,13 +15,6 @@ namespace Gas.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Окно эбаут.";
-
-            return View();
-        }
-
         public ActionResult Contact()
         {
             ViewBag.Message = "Страничка контактов";
@@ -34,9 +27,5 @@ namespace Gas.Controllers
             return View();
         }
 
-        public ActionResult Fonts()
-        {
-            return View();
-        }
     }
 }

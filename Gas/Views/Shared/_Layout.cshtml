@@ -24,11 +24,11 @@
                         <div class='row'>
                             <div class='col-xs-12 col-sm-8 col-md-8' id='main_menu'>
                                 <ul class="list-inline">
-                                    <li class='main_menu_item'>@Html.ActionLink("О нас", "Mock", "Home")</li>
-                                    <li class='main_menu_item'>@Html.ActionLink("Лого", "Mock", "Home")</li>
-                                    <li class='main_menu_item'>@Html.ActionLink("Дизайн", "Mock", "Home")</li>
-                                    <li class='main_menu_item'>@Html.ActionLink("Шрифты", "Fonts", "Home")</li>
-                                    <li class='main_menu_item'>@Html.ActionLink("Контакты", "Mock", "Home")</li>
+                                    <li class='main_menu_item' id="about">@Html.ActionLink("О нас", "About", "About")</li>
+                                    <li class='main_menu_item' id="logos">@Html.ActionLink("Лого", "Logos", "Logos")</li>
+                                    <li class='main_menu_item' id="design">@Html.ActionLink("Дизайн", "Design", "Design")</li>
+                                    <li class='main_menu_item' id="fonts">@Html.ActionLink("Шрифты", "Fonts", "Font")</li>
+                                    <li class='main_menu_item' id="contacts">@Html.ActionLink("Контакты", "Contacts", "Contacts")</li>
                                 </ul>
                             </div>
                             <div class='hidden-xs col-sm-4 col-md-4' id='main_phone'>
@@ -99,7 +99,10 @@
         </div>
     </div>
 
+    
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/rotatescript")
+    @Scripts.Render("~/bundles/viewscript")
     @RenderSection("scripts", required: false)
 </body>
 </html>

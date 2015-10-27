@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-6" id="font_menu">
                                 <ul class="list-inline">
-                                    <li class="font_menu_item">@Html.ActionLink("Кириллица", "Mock", "Home")</li>
+                                    <li id="cyrilic_fonts" class="font_menu_item">Кириллица</li>
                                     <li class="font_menu_item">Латиница</li>
                                     <li class="font_menu_item">Цифры</li>
                                     <li class="font_menu_item">Лигатуры</li>
@@ -44,3 +44,17 @@
         </div>
     </div>
 </div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/fontviewscript")
+    <script type="text/javascript">
+        $('#cyrilic_fonts').click(function() {
+            $.ajax({
+                    url: '@Url.Action("GetFontBlockView", "Font")'
+                })
+                .done(function(partialViewHtml) {
+                    $('#font_cyr_img').html(partialViewHtml);
+                })
+        });
+    </script>
+}
