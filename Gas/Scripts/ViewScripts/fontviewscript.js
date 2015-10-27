@@ -1,79 +1,56 @@
-﻿//
-//$('#font_item_showbutton_img').on('click', function () {
-    
-//    $(this).rotate({
-//            bind: {
-//                click: function () {
-//                    $(this).rotate({
-//                        angle: 0,
-//                        animateTo: 180,
-//                        easing: $.easing.easeInOutElastic
-//                    });
-//                }
-//            }
-//        });
-//    //$('#font_item_content').css({ 'display': 'block' });
-//});
-
+﻿// Handler of font content
 $("#font_item_showbutton_img").rotate({
     bind: {
         click: function () {
-            $(this).rotate({
-                angle: 0,
-                animateTo: 135
-            })
+            var prnt = $(this).closest("section");
+            console.log("find parent " + prnt.attr("id"));
+
+            // check angle of cross button
+            var angle = $(this).getRotateAngle();
+            console.log(angle);
+            if (angle == 0) {
+                $(this).rotate({
+                    angle: 0,
+                    animateTo: 135
+                });
+                // Mark class selected 
+                prnt.addClass("selected");
+            } else {
+                $(this).rotate({
+                    angle: 135,
+                    animateTo: 0
+                });
+                // Unmark class selected
+                prnt.removeClass("selected");
+            }
+            if ($("#font_item_content").css("display") == "none") {
+                $("#font_item_content").animate({ height: "show" }, 500);
+                // opened window
+
+                // handler of select menu
+                $('.font_menu_item').each(function () {
+                    $(this).on('mouseover', function () {
+                        $(this).css({
+                            'background': 'white'
+                        });
+                        $(this).find('a').css('color', 'black');
+                    });
+                    $(this).on('mouseout', function () {
+                        $(this).css({
+                            'background': 'transparent'
+                        });
+                        $(this).find('a').css('color', 'white');
+                    });
+                });
+
+            } else {
+                $("#font_item_content").animate({ height: "hide" }, 500);
+            }
         }
     }
 });
 
 
-//$("#font_item_showbutton_img").rotate({
-//    bind: {
-//        click: function() {
-//            $(this).rotate({
-//                angle: 0,
-//                animateTo: 135,
-//                callback: function() {
-//                    $('#font_item_content').toggle("slow", function() {
-//                        // Animation complete.
-//                    });
-//                }
-//            })
-//        }
-//    }
-//});
-
-
-//$('#font_item_showbutton_img').click(function () {
-//    $("#cross_btn").rotate(45);
-//});
-//$('#font_item_showbutton_img').rotate(45);
-
-//$("#font_item_showbutton_img").rotate({
-//    bind: {
-//        click: function () {
-//            $("#cross_btn").rotate({
-//                duration: 6000,
-//                angle: 0,
-//                animateTo: 100
-//            })
-//        }
-//    }
-//});
-
-//$("#cross_btn").rotate({
-//    bind: {
-//        click: function () {
-//            $(this).rotate({
-//                angle: 0,
-//                animateTo: 180,
-//                easing: $.easing.easeInOutElastic
-//            });
-//        }
-//    }
-//});
 
 
 
-
-/*jQueryRotate.js*/
