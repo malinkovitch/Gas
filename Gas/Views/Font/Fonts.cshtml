@@ -47,12 +47,5 @@
 
 @section scripts {
     @Scripts.Render("~/bundles/fontviewscript");
-    $('#cyrilic_fonts').click(function () {
-    $.ajax({
-        url: '@Url.Action("GetFontBlockView", "Font")'
-    })
-    .done(function (partialViewHtml) {
-        $('#font_cyr_img').html(partialViewHtml);
-    })
-    });
+    
 }

@@ -27,11 +27,12 @@ $("#font_item_showbutton_img").rotate({
                 $("#font_item_content").animate({ height: "show" }, 500);
                 // opened window
 
-                // handler of select menu
+                // handler of select type of font menu
                 $('.font_menu_item').each(function () {
                     $(this).on('mouseover', function () {
                         $(this).css({
-                            'background': 'white'
+                            'background': 'white',
+                            'cursor':'pointer'
                         });
                         $(this).find('a').css('color', 'black');
                     });
@@ -48,6 +49,17 @@ $("#font_item_showbutton_img").rotate({
             }
         }
     }
+});
+
+$('#cyrilic_fonts').click(function () {
+    //alert("sdsdsd");
+        $.ajax({
+            url: '@Url.Action("GetFontBlockView","Font")',
+            type: 'GET'
+    })
+    .done(function (partialViewHtml) {
+        $('#font_cyr_img').html(partialViewHtml);
+    })
 });
 
 
