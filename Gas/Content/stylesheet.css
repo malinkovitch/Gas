@@ -203,10 +203,10 @@ hgroup.title h2 {
     margin-top: 10px; 
 	background-overflow: hidden!important;
 }
-#font_cyr_img {
+#font_content {
     height: 170px;
 	width: 710px;
-	background: url(../images/action_cyr.png) left top no-repeat;
+    background-color: deepskyblue;
 	background-size: 706.3px 170px;
 	
 	margin-top: 40px;
