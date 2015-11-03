@@ -1,90 +1,113 @@
 ﻿// Handler of font content
+// Rotate cross button / open font tab
 $("#font_item_showbutton_img").rotate({
     bind: {
-        click: function () {
+        click: function() {
             var prnt = $(this).closest("section");
             console.log("find parent " + prnt.attr("id"));
+
             // check angle of cross button
             var angle = $(this).getRotateAngle();
             console.log('cross angle value ' + angle);
 
-            if (angle == 0) {
+            // in addiction of the angle rotate cross left / right
+            if (angle === 0) {
                 $(this).rotate({
                     angle: 0,
                     animateTo: 135
                 });
                 // Mark class selected 
-                prnt.addClass("selected");
+                prnt.addClass("active");
             } else {
                 $(this).rotate({
                     angle: 135,
                     animateTo: 0
                 });
                 // Unmark class selected
-                prnt.removeClass("selected");
+                prnt.removeClass("active");
             }
-            if ($("#font_item_content").css("display") == "none") {
-                // opened window
+
+            // handler of the opened / closed font tab
+            if ($("#font_item_content").css("display") === "none") {
                 $("#font_item_content").animate({ height: "show" }, 500);
-                $('.font_menu_item').first().css({
-                    'background': 'white'
-                }).addClass('choosen');
-                // Open firstmenu tab with content
 
-
-                // Menu
-                // animation handler of select type of font menu
-                $('.font_menu_item').each(
+                // opened window action
+                // font tab menu animation
+                $('.font_menu_item').hover(
                     function() {
-                        
-                        var className = $(this).attr('class').split(' ')[1];
-
-                        // handler of menu button click
-
-                        $(this).click(function (e) {
-                            if (className === 'choosen') {
-                                e.preventDefault();
-                                console.log('click function disable');
-                            } else {
-                                var fontMenuBtnId = $(this).attr('id');
-                                console.log(fontMenuBtnId);
-                                switch (fontMenuBtnId.toLowerCase()) {
-                                case 'cyrilic_fonts':
-                                    alert(fontMenuBtnId);
-                                    break;
-                                    case 'latin_fonts':
-                                        {
-                                            $(this).css({ 'background': 'green' }).addClass('choosen');
-                                            
-                                        }
-                                        break;
-                                case 'numbers_fonts':
-                                    alert(fontMenuBtnId);
-                                    break;
-                                case 'ligatures_fonts':
-                                    alert(fontMenuBtnId);
-                                    break;
-                                }
-                            }
-                        });
-                        if (className !== 'choosen') {
-                            $(this).on('mouseover', function() {
-                                $(this).css({
-                                    'background': 'white',
-                                    'cursor': 'pointer'
-                                });
-                                $(this).find('a').css('color', 'black');
+                        var arr = $(this).attr('class').split(' ');
+                        if (arr[1] !== 'selected') {
+                            $(this).css({
+                                'background-color': 'black',
+                                'cursor': 'pointer',
+                                'color': 'white'
                             });
-                            $(this).on('mouseout', function() {
-                                $(this).css({
-                                    'background': 'transparent'
-                                });
-                                $(this).find('a').css('color', 'white');
+                            console.log('1');
+                            
+                        } else {
+                            $(this).css({
+                                'background-color': 'black',
+                                'cursor': 'default'
                             });
+                            console.log('3');
+                            
                         }
-                    });
+                    },
+                    function() {
+                        var arr = $(this).attr('class').split(' ');
+                        if (arr[1] !== 'selected') {
+                            $(this).css({
+                                'background-color': 'transparent',
+                                'color': 'black'
+                            });
+                            console.log('2');
+                        } else {
+                            $(this).css({ 'background-color': 'black' });
+                            console.log('4');
+                        }
+                    }
+                );
 
-                // Font
+                // font tab menu click handler
+                $('.font_menu_item').click(
+                    function(e) {
+                        var arr = $(this).attr('class').split(' ');
+                        if (arr[1] !== 'selected') {
+                            var sblings = $(this).siblings('.selected');
+
+                            sblings.css({
+                                'background-color': 'transparent',
+                                'color': 'black'
+                            });
+                            sblings.removeClass('selected');
+                            $(this).addClass('selected');
+                            console.log('click');
+
+                            // data handler
+                            var fontMenuBtnId = $(this).attr('id');
+                            console.log(fontMenuBtnId);
+                            switch (fontMenuBtnId.toLowerCase()) {
+                            case 'cyrilic_fonts':
+                                $('#font_content').css({ 'background-color': 'green' });
+                                break;
+                            case 'latin_fonts':
+                                $('#font_content').css({ 'background-color': 'palegoldenrod' });
+                                break;
+                            case 'numbers_fonts':
+                                $('#font_content').css({ 'background-color': 'orange' });
+                                break;
+                            case 'ligatures_fonts':
+                                $('#font_content').css({ 'background-color': 'lightblue' });
+                                break;
+                            }
+
+                        } else {
+                            e.preventDefault();
+                        }
+                    }
+                );
+                /*+++++++++++++++++++++++++++++++++++++++*/
+
 
             } else {
                 $("#font_item_content").animate({ height: "hide" }, 500);

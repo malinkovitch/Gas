@@ -162,7 +162,6 @@ hgroup.title h2 {
 
 #main_content {
     height: 600px;
-    background-color: #adf555;
 }
 #font_item {
     margin-top: 15px;
@@ -206,7 +205,7 @@ hgroup.title h2 {
 #font_content {
     height: 170px;
 	width: 710px;
-    background-color: deepskyblue;
+    background: transparent;
 	background-size: 706.3px 170px;
 	
 	margin-top: 40px;
@@ -217,7 +216,6 @@ hgroup.title h2 {
 	height: 40px;
 	padding-top: 10px;
 	padding-left: 150px;
-    background-color: pink;
 }
 .font_menu_item{
 	padding-left: 5px!important;
