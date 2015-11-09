@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
+using Gas.Models;
 
 namespace Gas.Controllers
 {
@@ -10,13 +9,16 @@ namespace Gas.Controllers
     {
         public ActionResult Fonts()
         {
-            return View();
+            string xmlPath = Server.MapPath(WebConfigurationManager.AppSettings["FontsDbFilePath"]);
+            FontStorage fonts = new FontStorage(xmlPath);
+            Font[] listOfFonts = fonts.GetAllFonts();
+
+            return View(listOfFonts);
         }
 
         public ActionResult GetFontBlockView()
         {
             return PartialView();
         }
-
     }
 }

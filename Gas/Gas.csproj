@@ -192,6 +192,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\DesignController.cs" />
+    <Compile Include="Models\FontStorage.cs" />
+    <Compile Include="Models\Font.cs" />
     <Compile Include="Controllers\FontController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LogosController.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\fontdb.xml" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -229,9 +232,12 @@
     <Content Include="Images\facebook.png" />
     <Content Include="Images\Gaslight-site_logo.png" />
     <Content Include="Images\instagram.png" />
+    <Content Include="Images\maria_laurvik.png" />
     <Content Include="Images\phone.png" />
+    <Content Include="Images\roman_shukin.png" />
     <Content Include="Images\skype.png" />
     <Content Include="Images\twitter.png" />
+    <Content Include="Images\valeri_zaveryaev.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -297,9 +303,7 @@
     <Content Include="Views\Logos\Logos.cshtml" />
     <Content Include="Views\Design\Design.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>

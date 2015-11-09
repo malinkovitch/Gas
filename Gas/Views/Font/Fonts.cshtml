@@ -1,46 +1,74 @@
-﻿@{
+﻿@model Gas.Models.Font[]
+
+
+@{
     ViewBag.Title = "Fonts";
+   
 }
+
+
 
 <!DOCTYPE html>
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12" id="main_content">
         <div class="row">
-            <section class="col-xs-12 col-sm-12 col-md-12" id="font_item">
+            @for (int i = 0; i < Model.Length; i++)
+            {
+                <section class="col-xs-12 col-sm-12 col-md-12" id="font_item">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12" id="font_item_header">
                         <div class="row">
-                            <div class="col-xs-10 col-sm-6 col-md-6" id="font_item_img">
-                                Название шрифта
+                            <div class="col-xs-10 col-sm-6 col-md-6" id="font_item_img" style="font-family: @Model[i].CssName">
+                                @Model[i].Name
                             </div>
                             <div class="hidden-xs col-sm-2 col-sm-offset-2 col-md-2 col-md-offset-2" id="font_item_price">
-                                <div id="price">30$</div>
+                                <div id="price">@Model[i].Price$</div>
                             </div>
-                            <div class="col-xs-2  col-sm-2 col-md-2" id="font_item_showbutton">
-                                <div id="font_item_showbutton_img"></div>
+                            <div class="col-xs-2  col-sm-2 col-md-2">
+                                <div id="font_item_showbutton_img" class="font_item_showbutton"></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12" id="font_item_content">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12" id="font_cyr">
-                                <div id="font_content">sss</div>
+                                <div id="font_content" style="font-family: @Model[i].CssName"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-6" id="font_menu">
                                 <ul class="list-inline">
-                                    <li id="cyrilic_fonts" class="font_menu_item">Кириллица</li>
-                                    <li id="latin_fonts" class="font_menu_item">Латиница</li>
-                                    <li id="numbers_fonts" class="font_menu_item">Цифры</li>
-                                    <li id="ligatures_fonts" class="font_menu_item">Лигатуры</li>
+                                    @foreach (string type in Model[i].Type)
+                                    {
+                                        switch (type)
+                                        {
+                                            //кириллица,латиница,цифры,лигатуры
+                                            case "кириллица":
+                                                <li id="cyrilic_fonts" class="font_menu_item">Кириллица</li>
+                                                break;
+                                            case "латиница":
+                                                <li id="latin_fonts" class="font_menu_item">Латиница</li>
+                                                break;
+                                            case "цифры":
+                                                <li id="numbers_fonts" class="font_menu_item">Цифры</li>
+                                                break;
+                                            case "лигатуры":
+                                                <li id="ligatures_fonts" class="font_menu_item">Лигатуры</li>
+                                                break;
+
+                                        }
+
+                                    }
+                                    
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            }
+            
         </div>
     </div>
 </div>

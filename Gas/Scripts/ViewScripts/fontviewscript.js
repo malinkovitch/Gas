@@ -1,6 +1,7 @@
 ﻿// Handler of font content
 // Rotate cross button / open font tab
-$("#font_item_showbutton_img").rotate({
+
+$(".font_item_showbutton").rotate({
     bind: {
         click: function() {
             var prnt = $(this).closest("section");
@@ -11,7 +12,7 @@ $("#font_item_showbutton_img").rotate({
             console.log('cross angle value ' + angle);
 
             // in addiction of the angle rotate cross left / right
-            if (angle === 0) {
+            if (angle == 0) {
                 $(this).rotate({
                     angle: 0,
                     animateTo: 135
@@ -27,10 +28,12 @@ $("#font_item_showbutton_img").rotate({
                 prnt.removeClass("active");
             }
 
+            var fontToShow = prnt.find("#font_item_content");
+            console.log(fontToShow);
             // handler of the opened / closed font tab
-            if ($("#font_item_content").css("display") === "none") {
-                $("#font_item_content").animate({ height: "show" }, 500);
-
+            if (fontToShow.css("display") === "none") {
+                fontToShow.animate({ height: "show" }, 500);
+                
                 // opened window action
                 // font tab menu animation
                 $('.font_menu_item').hover(
@@ -86,12 +89,13 @@ $("#font_item_showbutton_img").rotate({
                             // data handler
                             var fontMenuBtnId = $(this).attr('id');
                             console.log(fontMenuBtnId);
+                            var fontContentDiv = prnt.find('#font_content');
                             switch (fontMenuBtnId.toLowerCase()) {
                             case 'cyrilic_fonts':
-                                $('#font_content').css({ 'background-color': 'green' });
+                                $(fontContentDiv).css({ 'background-color': 'green' });
                                 break;
                             case 'latin_fonts':
-                                $('#font_content').css({ 'background-color': 'palegoldenrod' });
+                                $(fontContentDiv).css({ 'background-color': 'palegoldenrod' });
                                 break;
                             case 'numbers_fonts':
                                 $('#font_content').css({ 'background-color': 'orange' });
@@ -110,7 +114,7 @@ $("#font_item_showbutton_img").rotate({
 
 
             } else {
-                $("#font_item_content").animate({ height: "hide" }, 500);
+                fontToShow.animate({ height: "hide" }, 500);
             }
         }
     }
