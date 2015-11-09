@@ -72,8 +72,10 @@ $(".font_item_showbutton").rotate({
                 );
 
                 // font tab menu click handler
-                $('.font_menu_item').click(
-                    function(e) {
+                var fontMenuBtn = prnt.find('.font_menu_item');
+                $(fontMenuBtn).click(
+                    function (e) {
+                        console.log('14');
                         var arr = $(this).attr('class').split(' ');
                         if (arr[1] !== 'selected') {
                             var sblings = $(this).siblings('.selected');
