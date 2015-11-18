@@ -210,6 +210,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fontsheet.css" />
+    <Content Include="Content\photoswipe.css" />
     <Content Include="Content\stylesheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -232,6 +234,8 @@
     <Content Include="Images\facebook.png" />
     <Content Include="Images\Gaslight-site_logo.png" />
     <Content Include="Images\instagram.png" />
+    <Content Include="Images\logo_test1.PNG" />
+    <Content Include="Images\logo_test2.PNG" />
     <Content Include="Images\maria_laurvik.png" />
     <Content Include="Images\phone.png" />
     <Content Include="Images\roman_shukin.png" />
@@ -253,10 +257,17 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ViewScripts\galleryScript.js" />
     <Content Include="Scripts\ViewScripts\fontviewscript.js" />
     <Content Include="Scripts\ViewScripts\jQueryRotate.js" />
+    <Content Include="Scripts\ViewScripts\photoswipe-ui-default.js" />
+    <Content Include="Scripts\ViewScripts\photoswipe-ui-default.min.js" />
+    <Content Include="Scripts\ViewScripts\photoswipe.js" />
+    <Content Include="Scripts\ViewScripts\photoswipe.min.js" />
     <Content Include="Scripts\ViewScripts\viewscript.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -305,7 +316,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

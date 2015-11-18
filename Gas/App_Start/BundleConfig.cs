@@ -26,6 +26,8 @@ namespace Gas
             
             bundles.Add(new ScriptBundle("~/bundles/fontviewscript").Include("~/Scripts/ViewScripts/fontview*"));
             bundles.Add(new ScriptBundle("~/bundles/rotatescript").Include("~/Scripts/ViewScripts/jQueryRotate*"));
+            bundles.Add(new ScriptBundle("~/bundles/photoswipe").Include("~/Scripts/ViewScripts/photoswipe*"));
+            bundles.Add(new ScriptBundle("~/bundles/galleryScript").Include("~/Scripts/ViewScripts/galleryScript*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/*.css"));
 

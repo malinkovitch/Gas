@@ -121,6 +121,19 @@ $(".font_item_showbutton").rotate({
         }
     }
 });
+
+function getCyrilicFont() {
+    
+}
+function getLatinFont() {
+
+}
+function getNumbers() {
+
+}
+function getLigatures() {
+
+}
 //$('#cyrilic_fonts').click(function() {
 
 //    $.ajax({

@@ -2,12 +2,11 @@
 	font-family: 'PTM55F';
 	src: url(../fonts/PTM55F_W.ttf);
 }
-@font-face{
+/*@font-face{
 	font-family: 'aorta';
 	src: url(../fonts/aorta.otf);
-}
+}*/
 body{
-	
 }
 .container-fluid{
 	background-color: #fff;
@@ -156,7 +155,37 @@ hgroup.title h2 {
     background-size: cover;
 }
 
-/* font body decription
+
+/* logo body description
+ -----------------------------------------*/
+.logos_row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.logo_ava_min {
+    height: 200px;
+}
+.logo_content {
+    border: #000 2px solid;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+}
+.floater_logo_helper {
+    float: left;
+	height: 50%;
+    width: 100%;
+	margin-bottom: -80px;
+}
+.logo_img {
+    width: 160px;
+    margin: 0 auto;
+    
+}
+
+
+
+/* font body description
 ------------------------------------------*/
 
 #main_content {
@@ -166,13 +195,19 @@ hgroup.title h2 {
 }
 #font_item_header {
     border: 1px solid #000;
+    
 }
 #font_item_img {
     height: 100px;
     background-color: gold;
     color: #000000;
-    padding: 20px 50px;
     font-size: 40pt;
+    position: relative;
+}
+.font_name {
+     position: absolute;
+    bottom: 0;
+    left: 30px;
 }
 #font_item_price {
     height: 100px;
