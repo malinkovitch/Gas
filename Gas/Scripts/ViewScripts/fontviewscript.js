@@ -3,7 +3,7 @@
 
 $(".font_item_showbutton").rotate({
     bind: {
-        click: function() {
+        click: function () {
             var prnt = $(this).closest("section");
             console.log("find parent " + prnt.attr("id"));
 
@@ -33,11 +33,11 @@ $(".font_item_showbutton").rotate({
             // handler of the opened / closed font tab
             if (fontToShow.css("display") === "none") {
                 fontToShow.animate({ height: "show" }, 500);
-                
+
                 // opened window action
                 // font tab menu animation
                 $('.font_menu_item').hover(
-                    function() {
+                    function () {
                         var arr = $(this).attr('class').split(' ');
                         if (arr[1] !== 'selected') {
                             $(this).css({
@@ -46,17 +46,17 @@ $(".font_item_showbutton").rotate({
                                 'color': 'white'
                             });
                             console.log('1');
-                            
+
                         } else {
                             $(this).css({
                                 'background-color': 'black',
                                 'cursor': 'default'
                             });
                             console.log('3');
-                            
+
                         }
                     },
-                    function() {
+                    function () {
                         var arr = $(this).attr('class').split(' ');
                         if (arr[1] !== 'selected') {
                             $(this).css({
@@ -93,19 +93,21 @@ $(".font_item_showbutton").rotate({
                             console.log(fontMenuBtnId);
                             var fontContentDiv = prnt.find('#font_content');
                             switch (fontMenuBtnId.toLowerCase()) {
-                            case 'cyrilic_fonts':
-                                $(fontContentDiv).css({ 'background-color': 'green' });
-                                break;
-                            case 'latin_fonts':
-                                $(fontContentDiv).css({ 'background-color': 'palegoldenrod' });
-                                break;
-                            case 'numbers_fonts':
-                                $('#font_content').css({ 'background-color': 'orange' });
-                                break;
-                            case 'ligatures_fonts':
-                                $('#font_content').css({ 'background-color': 'lightblue' });
-                                break;
+                                case 'cyrilic_fonts':
+                                    getCyrilicFont(fontContentDiv);
+                                    break;
+                                case 'latin_fonts':
+                                    $(fontContentDiv).css({ 'background-color': 'palegoldenrod' });
+                                    break;
+                                case 'numbers_fonts':
+                                    $('#font_content').css({ 'background-color': 'orange' });
+                                    break;
+                                case 'ligatures_fonts':
+                                    $('#font_content').css({ 'background-color': 'lightblue' });
+                                    break;
                             }
+
+
 
                         } else {
                             e.preventDefault();
@@ -122,17 +124,22 @@ $(".font_item_showbutton").rotate({
     }
 });
 
-function getCyrilicFont() {
-    
+
+
+
+
+
+function getCyrilicFont(elem){
+    $(elem).css({ 'background-color': 'green' });
 }
 function getLatinFont() {
-
+    $(fontContentDiv).css({ 'background-color': 'palegoldenrod' });
 }
 function getNumbers() {
-
+    $('#font_content').css({ 'background-color': 'orange' });
 }
 function getLigatures() {
-
+    $('#font_content').css({ 'background-color': 'lightblue' });
 }
 //$('#cyrilic_fonts').click(function() {
 

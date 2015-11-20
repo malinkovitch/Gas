@@ -2,3 +2,17 @@
 	font-family: 'aorta';
 	src: url(../fonts/aorta.otf);
 }
+
+@font-face{
+	font-family: 'BlissPro';
+	src: url(../fonts/BlissPro-Medium.otf);
+}
+
+@font-face{
+	font-family: 'drift';
+	src: url(../fonts/Drift___.ttf);
+}
+@font-face{
+	font-family: 'bangGang';
+	src: url(../fonts/GANGBANGCRIME.ttf);
+}

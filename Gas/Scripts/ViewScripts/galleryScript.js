@@ -1,4 +1,4 @@
-﻿var openPhotoSwipe = function() {
+﻿var openPhotoSwipe = function () {
     var pswpElement = document.querySelectorAll('.pswp')[0];
 
     // build items array
