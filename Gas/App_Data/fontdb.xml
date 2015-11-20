@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Fonts>
+  <Font Name="Aorta" CssName="Aorta" Path="c:\Work\111.txt" Categories="кириллица,латиница,цифры,лигатуры" Price="30" />
+  <Font Name="BlissPro" CssName="BlissPro" Path="" Categories="кириллица,латиница" Price="10" />
+  <Font Name="drift" CssName="drift" Path="" Categories="латиница,цифры,лигатуры" Price="50" />
+  <Font Name="bangGang" CssName="bangGang" Path="" Categories="кириллица,латиница,цифры" Price="15" />
+</Fonts>

@@ -1,0 +1,53 @@
+﻿@model Gas.Models.Font
+@{
+    ViewBag.Title = "Admin panel";
+}
+@using (Html.BeginForm("index", "changer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <!--Here the properties of font tab-->
+    <div id="font_admin_panel">
+        <h2>Параметры загружаемого шрифта:</h2>
+        <div class="item_field">
+            <label class="font_label_name">Отображаемое имя шрифта</label>
+            <div class="font_label_input">@Html.TextBoxFor(x => x.Name)</div>
+        </div>
+        <div class="clear"></div>
+        <div class="item_field">
+            <label class="font_label_name">Укажите цену шрифта</label>
+            <div class="font_label_input">@Html.TextBoxFor(x => x.Price)</div>
+        </div>
+        <div class="clear"></div>
+        <h3>Тип шрифта</h3>
+        <div class="item_field">
+            @Html.CheckBoxFor(x => x.CyrType)
+            <label>Кирилический шрифт</label>
+        </div>
+        <div class="clear"></div>
+        <div class="item_field">
+            @Html.CheckBoxFor(x => x.LatinType)
+            <label>Латинский шрифт</label>
+        </div>
+        <div class="clear"></div>
+        <div class="item_field">
+            @Html.CheckBoxFor(x => x.NumType)
+            <label>Цифры</label>
+        </div>
+        <div class="clear"></div>
+        <div class="item_field">
+            @Html.CheckBoxFor(x => x.LigaturesType)
+            <label>Лигатуры</label>
+        </div>
+        <div class="clear"></div>
+        <h3>Загружаемый файл шрифта</h3>
+        <div class="item_field">
+            <input id="File1" type="file" name="fileUpload" />
+        </div>
+        <div class="clear"></div>
+        <div class="item_field ">
+            <input id="fontSubmit" class="centred" type="submit" value="Upload" />
+        </div>
+        <div class="clear"></div>
+    </div>
+}
+
+

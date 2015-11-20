@@ -1,0 +1,29 @@
+﻿.clear {
+    clear: both;
+}
+#font_admin_panel {
+    width: 600px;
+}
+.item_field {
+    float: left;
+    width: 100%;
+    padding-top: 10px;
+}
+.centred {
+    margin: 20px 200px;
+}
+#fontSubmit {
+    width: 150px;
+    height: 30px;
+}
+.font_label_name {
+    width: 200px;
+}
+.font_label_input {
+    margin-left: 20px; 
+    width: 300px;
+    float: right;
+}
+.backToAdmin > a {
+    color: black;
+}
