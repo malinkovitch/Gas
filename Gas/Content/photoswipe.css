@@ -1,40 +1,44 @@
-/*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
-/*
-	Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)
-*/
-/* pswp = photoswipe */
+
 .pswp {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  -ms-touch-action: none;
-  touch-action: none;
-  z-index: 1500;
-  -webkit-text-size-adjust: 100%;
-  /* create separate layer, to avoid paint on window.onscroll in webkit/blink */
-  -webkit-backface-visibility: hidden;
-  outline: none; }
-  .pswp * {
+    display: none;                             /*NONE*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;/*100%*/
+
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+    z-index: 1500;
+    -webkit-text-size-adjust: 100%;
+    /* create separate layer, to avoid paint on window.onscroll in webkit/blink */
+    -webkit-backface-visibility: hidden;
+    outline: none;
+    background-color: aqua;
+}
+
+.pswp * {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-  .pswp img {
-    max-width: none; }
+    box-sizing: border-box; 
+}
+.pswp img {
+    max-width: none; 
+}
 
 /* style is added when JS option showHideOpacity is set to true */
 .pswp--animate_opacity {
-  /* 0.001, because opacity:0 doesn't trigger Paint action, which causes lag at start of transition */
-  opacity: 0.001;
-  will-change: opacity;
-  /* for open/close transition */
-  -webkit-transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
-          transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+    /* 0.001, because opacity:0 doesn't trigger Paint action, which causes lag at start of transition */
+    opacity: 0.001;
+    will-change: opacity;
+    /* for open/close transition */
+    -webkit-transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1);
+    transition: opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
 
 .pswp--open {
-  display: block; }
+    display: block; 
+
+}
 
 .pswp--zoom-allowed .pswp__img {
   /* autoprefixer: off */
@@ -44,9 +48,10 @@
 
 .pswp--zoomed-in .pswp__img {
   /* autoprefixer: off */
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab; }
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab; 
+}
 
 .pswp--dragging .pswp__img {
   /* autoprefixer: off */
@@ -59,15 +64,16 @@
 	As animating opacity is much faster than animating rgba() background-color.
 */
 .pswp__bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0;
-  -webkit-backface-visibility: hidden;
-  will-change: opacity; }
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;
+    background: tomato;
+    opacity: 0;                   /*0*/
+    -webkit-backface-visibility: hidden;
+    will-change: opacity; 
+}
 
 .pswp__scroll-wrap {
   position: absolute;
@@ -123,12 +129,13 @@
   -webkit-backface-visibility: hidden; }
 
 .pswp__item {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow: hidden; }
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
 
 .pswp__img {
   position: absolute;

@@ -1,100 +1,161 @@
 ﻿@{
     ViewBag.Title = "Logos";
 }
-@for (int k = 0; k < 3; k++)
-{
-  <div class="row logos_row">
-    @for (int i = 0; i < 4; i++)
-    {
-        <div class="col-xs-12 col-sm-12 col-md-3 logo_ava_min">
-            <div class="logo_content ">
-                <div class="floater_logo_helper"></div>
-                <div class="clear"></div>
-                <div class="logo_img">
-                    <img src="~/Images/logo_test1.PNG" />
-                </div>
-            </div>
-        </div>
-    }
-</div>
-}
-
-<button id="btn">Open PhotoSwipe</button>
 
 
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12" id="phgl_main_wrapper">
 
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
 
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
+        <div class="row">
+            <div class="phgl_img_wrapper">
+                <div class="phgl_content">
+                    <div class="phgl_content_image">
+                        <div class="stepbutton prev">
+                            <div class="logos_block_btn">
+                                <div id="logos_prev_btn"></div>
+                            </div>
+                        </div>
+                        <div class="logo_img_wrap">
+                            <div class="logos_centred">
+                                <img src="~/Images/demo_logo_2.png" class="logo_img_max" alt="Logo"/>
+                            </div>
+@*                            <div class="logos_centred_next">
+                                <img src="~/Images/demo_logo_3.png" class="logo_img_max" alt="Logo_next"/>
+                            </div>*@
+                        </div>
+                        <div class="stepbutton next">
+                            <div class="logos_block_btn">
+                                <div id="logos_next_btn"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="phgl_content_txt">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <h3>Логотип группы ТАПОГ</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-4 phgl_left_side_text logos_text">
+                                aaaaaaaaaaaaaaLorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 phgl_center_side_text logos_text">
+                                bbbbbbbbbbbbbbbbLorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 phgl_right_side_text logos_text">
+                                ccccccccccccccccccccLorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phgl_content_exit">
+                        <div class="phgl_exit"></div>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-----------------------------------------------------
+        Photoswipe
+        ------------------------------------------------------>
 
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
+        @*<!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+            <!-- Background of PhotoSwipe.
+            It's a separate element as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+                <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item">gjk</div>
+                    <div class="pswp__item">kkk</div>
+                    <div class="pswp__item">ddd</div>
+                </div>
+
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+
+                    <div class="pswp__top-bar">
+
+                        <!-- Controls are self-explanatory. Order can be changed. -->
+
+                        <div class="pswp__counter"></div>
+
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+
+                </div>
+
             </div>
 
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
+        </div>*@
 
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
+        <!-----------------------------------------------------
+        ------------------------------------------------------>
 
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
+        <div class="row">
+            <div class="phgl_txt_wrapper">
+                @for (int k = 0; k < 3; k++)
+                {
+                    <div class="row logos_row">
+                        @for (int i = 0; i < 4; i++)
+                        {
+                            <div class="col-xs-12 col-sm-6 col-md-3 logo_ava_min">
+                                <div class="logo_content ">
+                                    <div class="floater_logo_helper"></div>
+                                    <div class="clear"></div>
+                                    <div class="logo_img">
+                                        <img src="~/Images/logo_test1.PNG" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
             </div>
-
         </div>
 
     </div>
-
 </div>
+
 
 
 @section scripts {
     @Scripts.Render("~/bundles/photoswipe")
     @Scripts.Render("~/bundles/galleryScript")
 }
-
-<!--
-    <img src="~/Images/logo_test1.PNG" />
-    -->
